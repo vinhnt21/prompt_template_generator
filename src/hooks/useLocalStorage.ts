@@ -1,9 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
-      const item = window.localStorage.getItem(key);
+      let item = window.localStorage.getItem(key);
+      if (key === "templates" && item) {
+        item = JSON.parse(item).filter((i: any) => {
+          return (
+            i.id !== "role-context-task-en" &&
+            i.id !== "role-context-task-vi" &&
+            i.id !== "context-task-en" &&
+            i.id !== "context-task-vi"
+          );
+        });
+        return item ? [initialValue, ...item] : [initialValue];
+      }
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
       console.error(error);
