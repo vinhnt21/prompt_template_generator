@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-6">
           <p className="text-gray-600 dark:text-gray-300 text-lg font-medium">
-            Rất vui được kết nối! 🤝
+            Nice to connect with you! Let's get in touch. 🚀
           </p>
         </div>
 
