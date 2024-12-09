@@ -41,7 +41,7 @@ function App() {
     defaultTemplates
   );
   const [selectedTemplate, setSelectedTemplate] = useState<Template | null>(
-    null
+    templates[3]
   );
   const [inputs, setInputs] = useState<TemplateInput[]>([]);
   const [showCreateModal, setShowCreateModal] = useState(false);
@@ -54,6 +54,16 @@ function App() {
     );
   };
 
+  useEffect(() => {
+    if (selectedTemplate) {
+      setInputs(
+        selectedTemplate.fields.map((field) => ({
+          fieldId: field.id,
+          value: "",
+        }))
+      );
+    }
+  }, [selectedTemplate]);
   const handleSaveTemplate = (template: Template) => {
     if (editingTemplate) {
       setTemplates(
@@ -82,13 +92,13 @@ function App() {
     <div className="min-h-screen bg-gray-50 relative">
       <button
         onClick={toggleDarkMode}
-        className="fixed top-4 right-4 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+        className="fixed top-2 right-2 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-color "
         aria-label="Toggle theme"
       >
         {isDarkMode ? (
-          <Sun className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+          <Sun className="w-6 h-6 text-yellow-200 dark:text-yellow-400" />
         ) : (
-          <Moon className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+          <Moon className="w-6 h-6 text-gray-950 dark:text-gray-300" />
         )}
       </button>
       <div className="max-w-5xl mx-auto p-6">
@@ -130,7 +140,7 @@ function App() {
                   
                 <button
                   onClick={() => setShowCreateModal(true)}
-                  className="h-[38px] px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2 transition-colors"
+                  className="h-[38px] px-4 py-8 md:py-0 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2 transition-colors"
                 >
                   <Plus size={20} />
                   <span>New Template</span> 

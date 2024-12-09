@@ -24,7 +24,7 @@ export function GeneratedPrompt({ template, inputs }: GeneratedPromptProps) {
     try {
       await navigator.clipboard.writeText(generatePrompt());
       setIsCopied(true);
-      toast.success("Copied to clipboard!", {
+      toast.success("Copied to clipboard!📋", {
         duration: 2000,
         style: {
           background: "#333",
@@ -32,7 +32,7 @@ export function GeneratedPrompt({ template, inputs }: GeneratedPromptProps) {
           borderRadius: "10px",
           padding: "16px",
         },
-        icon: "📋",
+        icon: "✅",
       });
 
       // Reset copy icon after 2 seconds
@@ -48,6 +48,7 @@ export function GeneratedPrompt({ template, inputs }: GeneratedPromptProps) {
           borderRadius: "10px",
           padding: "16px",
         },
+        icon: "❌",
       });
     }
   };

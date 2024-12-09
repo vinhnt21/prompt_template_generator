@@ -1,6 +1,6 @@
-import React from 'react';
-import { Template } from '../types/template';
-import { Pencil, Trash2 } from 'lucide-react';
+import React from "react";
+import { Template } from "../types/template";
+import { Pencil, Trash2 } from "lucide-react";
 
 interface TemplateManagerProps {
   templates: Template[];
@@ -8,8 +8,12 @@ interface TemplateManagerProps {
   onEditTemplate: (template: Template) => void;
 }
 
-export function TemplateManager({ templates, onDeleteTemplate, onEditTemplate }: TemplateManagerProps) {
-  const customTemplates = templates.filter(t => !t.id.startsWith('role-context-task'));
+export function TemplateManager({
+  templates,
+  onDeleteTemplate,
+  onEditTemplate,
+}: TemplateManagerProps) {
+  const customTemplates = templates.filter((t) => !t.id.startsWith("default"));
 
   if (customTemplates.length === 0) {
     return (
@@ -29,7 +33,8 @@ export function TemplateManager({ templates, onDeleteTemplate, onEditTemplate }:
           <div>
             <h3 className="font-medium text-gray-900">{template.name}</h3>
             <p className="text-sm text-gray-500">
-              {template.language === 'en' ? 'English' : 'Vietnamese'} • {template.fields.length} fields
+              {template.language === "en" ? "English" : "Vietnamese"} •{" "}
+              {template.fields.length} fields
             </p>
           </div>
           <div className="flex gap-2">

@@ -46,7 +46,7 @@ export default function Footer() {
 
         <div className="text-center mt-6">
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            © {new Date().getFullYear()} @vinhnt21. All rights reserved.
+            © {new Date().getFullYear()} vinhnt21. All rights reserved.
           </p>
         </div>
       </div>
