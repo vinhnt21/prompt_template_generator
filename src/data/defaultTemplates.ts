@@ -23,7 +23,7 @@ export const defaultTemplates: Template[] = [
       },
     ],
     template:
-      "You are an expert {{role}}\n\nContext: {{context}}\n\nPlease complete the following task: {{task}}",
+      "You are an expert {{role}}\n\nContext: {{context}}\n\nComplete the following task: {{task}}",
   },
   {
     id: "default-role-context-task-vi",
@@ -47,7 +47,7 @@ export const defaultTemplates: Template[] = [
       },
     ],
     template:
-      "Bạn là một chuyên gia {{role}}\n\nBối cảnh: {{context}}\n\nVui lòng thực hiện nhiệm vụ sau: {{task}}",
+      "Bạn là một chuyên gia {{role}}\n\nBối cảnh: {{context}}\n\nHoàn thành nhiệm vụ sau: {{task}}",
   },
   {
     id: "default-context-task-en",
@@ -65,8 +65,7 @@ export const defaultTemplates: Template[] = [
         placeholder: "What needs to be done?",
       },
     ],
-    template:
-      "Context: {{context}}\n\nPlease complete the following task: {{task}}",
+    template: "Context: {{context}}\nComplete the following task: {{task}}",
   },
   {
     id: "default-context-task-vi",
@@ -84,7 +83,6 @@ export const defaultTemplates: Template[] = [
         placeholder: "Cần thực hiện những gì?",
       },
     ],
-    template:
-      "Bối cảnh: {{context}}\n\nVui lòng thực hiện nhiệm vụ sau: {{task}}",
+    template: "Bối cảnh: {{context}}\n\nHoàn thành nhiệm vụ sau: {{task}}",
   },
 ];

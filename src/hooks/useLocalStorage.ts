@@ -10,10 +10,16 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
             i.id !== "role-context-task-en" &&
             i.id !== "role-context-task-vi" &&
             i.id !== "context-task-en" &&
-            i.id !== "context-task-vi"
+            i.id !== "context-task-vi" &&
+            i.id !== "default-role-context-task-en" &&
+            i.id !== "default-role-context-task-vi" &&
+            i.id !== "default-context-task-en" &&
+            i.id !== "default-context-task-vi"
           );
         });
-        return item ? [initialValue, ...item] : [initialValue];
+        return Array.isArray(initialValue)
+          ? initialValue.concat(item)
+          : initialValue;
       }
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {

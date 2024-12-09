@@ -64,6 +64,7 @@ function App() {
       );
     }
   }, [selectedTemplate]);
+
   const handleSaveTemplate = (template: Template) => {
     if (editingTemplate) {
       setTemplates(
