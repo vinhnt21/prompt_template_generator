@@ -8,6 +8,7 @@ import { GeneratedPrompt } from "./components/GeneratedPrompt";
 import { CreateTemplateModal } from "./components/CreateTemplateModal";
 import { TemplateManager } from "./components/TemplateManager";
 import { Sparkles, Plus, Sun, Moon } from "lucide-react";
+import Footer from "./components/common/Footer";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -173,6 +174,7 @@ function App() {
           </div>
             
         </main>
+        <Footer />
       </div>
       {/* Modal */}
       {showCreateModal && (
