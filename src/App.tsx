@@ -102,11 +102,11 @@ function App() {
           <Moon className="w-6 h-6 text-gray-950 dark:text-gray-300" />
         )}
       </button>
-      <div className="max-w-5xl mx-auto p-6">
+      <div className="max-w-5xl mx-auto p-3">
         <header className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-3">
             <Sparkles className="text-blue-500" size={28} />
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
               Prompt Generator
             </h1>
           </div>
@@ -114,7 +114,7 @@ function App() {
             Create customized prompts using templates  
           </p>
         </header>
-        <main className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8">
+        <main className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8 my-2">
           <div className="grid grid-cols-1 gap-8">
             <section className="space-y-4">
               <div className="flex items-center justify-between gap-4">
