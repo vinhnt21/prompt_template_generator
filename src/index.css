@@ -1,0 +1,112 @@
+/* index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light mode (default) */
+:root {
+  --background-primary: #f9fafb;
+  --background-secondary: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --border-color: #e5e7eb;
+  --button-primary: #2563eb;
+  --button-hover: #1d4ed8;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+/* Dark mode */
+.dark {
+  --background-primary: #111827;
+  --background-secondary: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --border-color: #374151;
+  --button-primary: #3b82f6;
+  --button-hover: #60a5fa;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.5);
+}
+
+/* Apply variables to elements */
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.min-h-screen {
+  background-color: var(--background-primary) !important;
+}
+
+.bg-white,
+.bg-gray-50 {
+  background-color: var(--background-secondary) !important;
+}
+
+.text-gray-900 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-700,
+.text-gray-600 {
+  color: var(--text-secondary) !important;
+}
+
+/* Buttons */
+.bg-blue-600 {
+  background-color: var(--button-primary) !important;
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: var(--button-hover) !important;
+}
+
+/* Borders and shadows */
+.shadow-sm {
+  box-shadow: var(--shadow) !important;
+}
+
+/* Input fields */
+input,
+textarea,
+select {
+  background-color: var(--background-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--button-primary) !important;
+}
+
+/* Modal */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal-content {
+  background-color: var(--background-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Additional elements */
+button {
+  border-color: var(--border-color);
+}
+
+/* Template selector and manager */
+.template-item {
+  background-color: var(--background-secondary);
+  border-color: var(--border-color);
+}
+
+.template-item:hover {
+  background-color: var(--background-primary);
+}
+
+/* Transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
