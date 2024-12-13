@@ -42,7 +42,7 @@ function App() {
     defaultTemplates
   );
   const [selectedTemplate, setSelectedTemplate] = useState<Template | null>(
-    templates[3]
+    templates[2]
   );
   const [inputs, setInputs] = useState<TemplateInput[]>([]);
   const [showCreateModal, setShowCreateModal] = useState(false);
