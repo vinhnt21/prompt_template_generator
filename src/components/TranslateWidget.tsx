@@ -91,7 +91,7 @@ export const TranslateWidget: React.FC<TranslateWidgetProps> = ({
         <iframe
           src={translateUrl}
           className="w-[143%] h-[143%] border-none origin-top-left"
-          style={{ transform: "scale(0.7)" }}
+          style={{ transform: isMaximized ? "scale(1)" : "scale(0.7)" }}
           title="Bing Translator"
           sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
           loading="lazy"
