@@ -9,9 +9,10 @@ import { CreateTemplateModal } from "./components/CreateTemplateModal";
 import { TemplateManager } from "./components/TemplateManager";
 import { Sparkles, Plus, Sun, Moon } from "lucide-react";
 import Footer from "./components/common/Footer";
+import { TranslateWidget } from "./components/TranslateWidget";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     // Check initial preference
@@ -91,6 +92,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 relative">
+      <TranslateWidget />
       <button
         onClick={toggleDarkMode}
         className="fixed top-2 right-2 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-color "
